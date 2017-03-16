@@ -1,0 +1,85 @@
+  	/* 魅族官网主页样式 */
+
+    /* nav部分 */
+     nav .nav-logo{
+      float: left;
+      background: url(../images/meizu-ico.png) no-repeat center center;
+      width: 140px;
+      height: 82px;
+     }
+     nav .nav-list{
+      width: 790px;
+      float: right;
+      display: flex;
+      justify-content: space-around;
+      position: relative;
+     }
+     nav .nav-list li{
+      height: 82px;
+     }
+     nav .nav-list li a{
+      color: #444;
+      transition: 0.5s;
+     }
+     nav .nav-list li a:hover{
+      color: var(--cr);
+     }
+
+    /* 大banner部分 */
+    header{
+      position: 
+      relative;
+      width: 100%;
+      overflow: hidden;
+      height: 760px;
+    }
+    header ul{
+      display: flex;
+      flex-direction: row;
+      position: absolute;
+      left: 0;
+      transition: 0.8s;
+
+    }
+    header ol{  
+      width: 160px;
+      position: absolute;
+      left: 0;
+      right:0;
+      bottom: 20px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;      
+    }
+    header a{
+      width: 1349px;
+      height: 760px;
+      display: block;
+      background-repeat: no-repeat;
+      background-position: center center;
+      overflow: hidden;
+    }
+    header ol li{
+      margin: 0 10px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background-color: #555;
+      cursor: pointer;
+    }
+    header ol .active{
+      background-color: transparent;
+      border: 1px solid #ccc;
+    }
+    /* 小banner部分 */
+    article{
+      height: 300px;
+    }
+    article a{
+      display:block;
+      float: left;
+      background-repeat: no-repeat;
+      background-position: center center;
+      width: 33%;
+      height: 300px;
+    }
