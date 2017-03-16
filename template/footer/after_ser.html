@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=1240">
+  <title>魅族在线商店产品三包服务</title>	
+  <meta name="keywords" content="售后服务" />	
+  <meta name="description" content="售后服务" />
+  <link rel="shortcut icon" href="../../favicon.ico">
+  <link rel="stylesheet" type="text/css" href="../../css/base.css">
+	<script type="text/javascript" src= "../../js/vue.min.js"></script>
+	<script type="text/javascript" src= "../../js/vue-router.js"></script>
+	<script type="text/javascript" src= "../../js/base.js"></script> 
+	<style type="text/css">
+	  .center{width: 960px;margin: 0 auto;}
+		.crumbs{
+			width: 100%;
+			padding: 30px 0;
+			font-size: 14px;
+			color: #333;
+			border-bottom: 1px solid #ccc;
+		}
+		.side{
+      width: 220px;
+      min-height: 100px;
+      padding: 25px 0;
+      background-color: #f5f5f5;
+      float: left;
+		}
+		.side ul{
+			margin-bottom: 20px;
+		}
+		.side ul li.title{
+        padding-left: 24px;
+        height: 42px;
+        line-height: 42px;
+        font-size: 16px;
+        color: #111;
+		} 
+		.side ul li{
+			height: 38px;
+			line-height: 38px;
+			font-size: 14px;
+			color: #666;
+		}
+		.side ul li a{color: #666;display: block;padding-left: 24px;}
+		.side ul li a:hover{border-left: 2px solid #00a7eb;background-color: #fff;}
+		.side .current{border-left: 2px solid #00a7eb;background-color: #fff;}
+		.main{
+			width: 640px;
+			padding: 50px;
+			float: left;
+			font-size: 14px;
+			color: #333;
+		}
+		h2{font-size: 18px;color: #111;}
+		h3{font-size: 16px;color: #222;margin-top: 40px;}
+		.content{line-height: 25px;margin-top: 20px;}
+	</style> 
+</head>
+<body>
+	<div id="nav">
+		<m-nav></m-nav>
+	</div>
+	<div id="head">
+		<m-head></m-head>
+	</div>
+	<article class="center" id="router">
+		<section class="crumbs">服务支持 > 售后服务政策</section>
+    <m-serside></m-serside>
+		<section class="main" id="view">
+			<router-view></router-view>
+		</section>
+	</article>
+	<div id="footer">
+		<m-footer></m-footer>
+	</div>	
+</body>
+</html>
+<template id="explain">
+	<div>
+		<h2 v-text="title"></h2>
+		<h3 v-text="subTitle"></h3>
+		<div class="content">
+		   <p v-for="item in content" v-html="item"></p>
+		</div>
+	</div>
+</template>
+<script type="text/javascript">
+ Vue.component('m-serside',{
+	template:`
+	   <aside class="side">
+       <ul>
+	   			<li class="title"><b>手机售后政策</b></li>
+	   			<li v-for="(item,index) in service1" @click="show"><router-link :to="link1[index]"    v-text="item"></router-link></li>
+       </ul>
+       <ul>
+	   			<li class="title"><b>配件售后政策</b></li>
+           <li v-for="(item,index) in service2" @click="show"><router-link :to="link2[index]"    v-text="item"></router-link></li>
+	   		</ul>
+	   		<ul>	
+	   			<li class="title"><b>服务渠道</b></li>
+           <li v-for="(item,index) in service3" @click="show"><router-link :to="link3[index]"    v-text="item"></router-link></li>
+	   		</ul>
+     </aside>
+  	`,
+	data(){
+		return{
+       service1:['7日免费退货','15日免费退货','一年免费保修','保外服务'],
+       service2:['魅族官方配件','第三方厂家配件','售后服务快速解答'],
+       service3:['授权服务体验中心','专卖店','寄修服务'],
+       link1:['policy1','policy2','policy3','policy4'],
+       link2:['policy5','policy6','policy7'],
+       link3:['policy8','policy9','policy10']
+		}
+	},
+	methods:{
+		show:function(ev){
+			  var aside = document.querySelector('.side');
+			  var li = aside.querySelectorAll('li');
+			  for(var i=0;i<li.length;i++){
+            li[i].className = '';			  	
+			  }
+        ev.target.className = 'current'
+		}
+	}
+});
+const Policy1 = { 
+	template: '#explain',
+	data(){
+		return {
+			title:'手机类产品售后政策',
+			subTitle:'7日免费退货',
+			content:{
+			   content1:'1) 魅族在线商店销售的手机产品自收货之日起7日内（含），在商品完好的情况   下，可申请七日无理由退货，七日无理由退货所产生的运费需消费者承担。',
+			   content2:'2) 自收货之日起7日内（含），手机主机出现国家规定的《移动电话机商品性能   故障表》所列出的性能故障，并经魅族厂家或官方授权服务点检测确定手机主机出现符合三   包规定的性能故障，您可以选择维修、更换同型号同规格的手机主机或退货；如果您选择退货，请您携带主机及其全部配件到销售商所在地，按照购买价格（以魅族公司公布的市场零售价格为准）一次性退清货款。退货及退款由销售商负责。',
+			   content3:'3) 退货需保持商品包装、主机、配件及发票完好齐全。'
+			}
+		}
+	}
+};
+
+const Policy2 = { 
+	template:'#explain',
+	data(){
+		return {
+			title:'手机类产品售后政策',
+			subTitle:'15日免费换货',
+			content:{
+			content1:'自收货之日起15日内（含），如果手机主机出现符合三包规定的性能故障，并经魅族厂家或官方授权服务点检测确定手机主机出现符合三包规定的性能故障，您可以选择修理或者免费更换同型号同规格的手机主机。办理换货时需提供发票（开具电子发票的订单售后处理时无需提供发票）及填写完整的保修卡等有效购买凭证。'
+			}
+		}
+	 }
+ };
+const Policy3 = { 
+	template:'#explain',
+	data(){
+		return {
+			title:'手机类产品售后政策',
+			subTitle:'一年免费保修',
+			content:{
+			   content1:'1）自购买之日起后一年内（含），如果手机主机出现国家三包规定中所列非人为性能故障，并经魅族授权的维修、服务网点检测确定，检测确认手机主机出现符合国家三包规定的非人为性能故障，您可以选择免费维修。',
+			   content2:'2）上述故障经两次维修，仍不能正常使用的，用户可凭三包凭证中修理者提供的修理记录，由销售商负责免费更换同型号同规格的手机主机。',
+			   content3:'3）若符合换货条件，并且销售商有同型号、同规格的机器，消费者不愿意调换而要求退货的，可按购机价格每天0.5%比例收取折旧费后给予退机。退款=购机价—购机价*使用天数*0.5%'
+			}
+		}
+	 }
+ }; 
+
+const Policy4 = { 
+	template:'#explain',
+	data(){
+		return {
+			title:'手机类产品售后政策',
+			subTitle:'保外服务',
+			content:{
+			   content1:'自您购机之日起，若属于下列原因中的任何一种而导致设备出现故障或损坏的，魅族公司有权根据国家"三包"有关规定，不按照"三包"承诺条款的内容提供服务，但您可以选择有偿服务:',
+			   content2:'1)整机及部件已经超过退换货或维修有效期的；<br />\
+                   2)无"三包"凭证及有效发票，但能够证明该移动电话机商品在三包有效期内的除外；<br />\
+                   3)"三包"凭证上的内容与商品实物标识不符或者涂改的；<br />\
+                   4)未按产品使用说明书要求使用、维护、保养而造成损坏的；<br />\
+                   5)私自拆动造成损坏，非经魅族公司认可方维修和改装的；<br />\
+                   6)进液、受潮或发霉的；<br />\
+                   7)因不可抗力造成损坏的；<br />\
+                   8)除国家三包规定所列的设备主要部件之外，设备的辅助部件和其他部件出现故障的。'
+			}			
+		}
+	}
+}
+const Policy5 = { 
+	template: '#explain',
+	data(){
+		return {
+			title:'手机类产品售后政策',
+			subTitle:'7日免费退货',
+			content:{
+			   content1:'1) 魅族在线商店销售的手机产品自收货之日起7日内（含），在商品完好的情况   下，可申请七日无理由退货，七日无理由退货所产生的运费需消费者承担。',
+			   content2:'2) 自收货之日起7日内（含），手机主机出现国家规定的《移动电话机商品性能   故障表》所列出的性能故障，并经魅族厂家或官方授权服务点检测确定手机主机出现符合三   包规定的性能故障，您可以选择维修、更换同型号同规格的手机主机或退货；如果您选择退货，请您携带主机及其全部配件到销售商所在地，按照购买价格（以魅族公司公布的市场零售价格为准）一次性退清货款。退货及退款由销售商负责。',
+			   content3:'3) 退货需保持商品包装、主机、配件及发票完好齐全。'
+			}
+		}
+	}
+}
+const Policy6 = { template: '<div>ba1</div>' }
+const Policy7 = { template: '<div>fo1</div>' }
+const Policy8 = { template: '<div>ba1</div>' }
+const Policy9 = { template: '<div>fo1</div>' }
+const Policy10 ={ template:'<div>ba1</div>' }
+
+const routes = [
+  { path: '/policy1', component: Policy1 },
+  { path: '/policy2', component: Policy2 },
+  { path: '/policy3', component: Policy3 },
+  { path: '/policy4', component: Policy4 },
+  { path: '/policy4', component: Policy5 },
+  { path: '/policy5', component: Policy6 },
+  { path: '/policy7', component: Policy7 },
+  { path: '/policy8', component: Policy8 },
+  { path: '/policy9', component: Policy9 },
+  { path: '/policy10', component: Policy10 },  
+]
+
+const router = new VueRouter({
+  routes // （缩写）相当于 routes: routes
+})
+
+  new Vue({
+    router
+  }).$mount('#router');
+
+
+  new Vue({
+		el: "#nav"
+	});
+	new Vue({
+		el: "#head"
+	});		
+	new Vue({
+		el: "#footer"
+	});
+
+</script>

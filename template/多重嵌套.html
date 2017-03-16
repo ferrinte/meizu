@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>多重嵌套</title>
+	<script type="text/javascript" src="../js/vue.min.js"></script>
+</head>
+<body>
+<div id="demo"><z-nav></z-nav></div>	
+</body>
+</html>
+<template id="footbar">
+      <ul class="float-mobile" v-for="(value,key,index) in hideBar.mobile" :class="key">{{value}}--{{key}}--{{index}}
+         <li v-for="(item,key,i) in value" :class="value[index]">
+           <a :href="item" :style="{backgroundImage:key}">
+             <i>pro6</i>
+           </a>
+         </li>
+      </ul>
+</template>
+<script type="text/javascript">
+ Vue.component('z-nav',{
+	template:'#footbar',
+	data(){
+       return {
+          hideBar:{
+             mobile:{
+                meizu:[
+                {'url(../images/pro01.png)':'index.html'},
+                {'url(../images/pro02.png)':'index.html'},
+                {'url(../images/pro03.png)':'index.html'}],
+                meilan:[
+                {'url(../images/note01.png)':'index.html'},
+                {'url(../images/note02.png)':'index.html'},
+                {'url(../images/note03.png)':'index.html'},
+                {'url(../images/note04.png)':'index.html'},
+                {'url(../images/note05.png)':'index.html'},
+                {'url(../images/note06.png)':'index.html'},
+                {'url(../images/note07.png)':'index.html'},],
+                affix:[
+                {'url(../images/affix01.png)':'index.html'},
+                {'url(../images/affix02.png)':'index.html'},
+                {'url(../images/affix03.png)':'index.html'},
+                {'url(../images/affix04.png)':'index.html'},
+                {'url(../images/affix05.png)':'index.html'},
+                {'url(../images/affix06.png)':'index.html'},],
+                auto:[
+                {'url(../images/ying01.png)':'index.html'},
+                {'url(../images/ying02.png)':'index.html'},
+                {'url(../images/ying03.png)':'index.html'},
+                {'url(../images/ying04.png)':'index.html'},
+                {'url(../images/ying05.png)':'index.html'},
+                {'url(../images/ying06.png)':'index.html'},
+                {'url(../images/ying07.png)':'index.html'},
+                {'url(../images/ying08.png)':'index.html'},]
+             },
+          }
+       }
+     }
+  });
+
+  new Vue({
+ 
+ 	el: "#demo"
+ 
+ });
+</script>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>care</title>
+	<link rel="stylesheet" type="text/css" href="../css/mbase.css">
+	<script type="text/javascript" src="../js/vue.min.js"></script>
+	<script type="text/javascript" src="../js/mbase.js"></script>
+	<style type="text/css">
+		#footer{
+			position: absolute;
+			top:400px;
+			left: 0;
+			right: 0;
+			margin: auto;
+		}
+	</style>
+</head>
+<body>
+<div id="nav"><z-nav></z-nav></div>
+<div id="footer" ><z-footer></z-footer></div>
+</body>
+</html>
+<script type="text/javascript">
+	new Vue({
+		el: "#nav"
+	});
+	new Vue({
+		el: "#footer"
+	})
+</script>

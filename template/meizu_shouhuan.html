@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>魅族手环-魅族商城</title>
+
+  <meta name="viewport" content="width=1240, initial-scale=1">
+  <link href="//store.res.meizu.com/layout/img/favicon-2e71785f44.ico" rel="shortcut icon" type="image/x-icon" />
+  <link href="//store.res.meizu.com/layout/img/favicon-2e71785f44.ico" rel="icon" type="image/x-icon" />
+  <meta name="description" content="魅族手环，腕间流动的心率专家，正品行货，另有魅族手环详细介绍、图片、价格、参数、售前咨询等，购买魅族手环上魅族商城，全场包邮，7天无理由退货，15天换货保障。">
+  <meta name="keywords" content="魅族手环，魅族，魅族商城">
+  <link rel="shortcut icon" href="../favicon.ico">
+  <link rel="stylesheet" type="text/css" href="../css/base.css">
+  <link rel="stylesheet" type="text/css" href="../css/store.css">
+  <script type="text/javascript" src="../js/vue.min.js"></script>
+  <script type="text/javascript" src="../js/base.js"></script>
+  <script type="text/javascript" src="../js/store.js"></script>
+  <style type="text/css">
+
+  </style>
+</head>
+<body>
+ <div id="nav"><m-nav></m-nav></div>
+ <div id="header"><m-header></m-header></div>
+
+ <div id="store">
+     <m-store :preview="preview" :property="property"></m-store>
+ </div>
+
+ <div id="footer"><m-footer></m-footer></div>
+</body>
+</html>
+<script type="text/javascript">
+  new Vue({
+	  el: "#store",
+	  data:{
+      preview:{
+      	preone:[
+          ['../images/store/pre-shouhuan01.jpg','../images/store/thu-shouhuan01.jpg'],
+          ['../images/store/pre-shouhuan02.jpg','../images/store/thu-shouhuan02.jpg'],
+          ['../images/store/pre-shouhuan03.jpg','../images/store/thu-shouhuan03.jpg'],
+          ['../images/store/pre-shouhuan04.jpg','../images/store/thu-shouhuan04.jpg'],
+        ],
+      },
+      property:{
+       	proTitle:'魅族手环',
+         proSubTitle:'瞬间流动的心率专家',
+         proPrice:['价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格 :','￥229.00'],
+         proColor:{
+         	title:'颜色分类',
+         	color:{
+         		黑色:'../images/store/idx-shouhuan.png',
+         	},
+         },
+         proService:{
+           support:['支&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;持 :','顺丰包邮&nbsp;&nbsp;&nbsp;七天无理由退货'],
+           service:['服&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;务 :','本商品由 魅族 负责发货并提供售后服务'],
+         },
+      }
+	  }
+  });
+  new Vue({
+	el: "#nav"
+  });
+  new Vue({
+	el: "#header"
+  });
+  new Vue({
+	el: "#footer"
+  });
+</script>

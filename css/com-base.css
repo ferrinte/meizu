@@ -1,0 +1,28 @@
+    	:root{
+    		--cr:#00c3f5;
+    	}
+    	.clear:before, .clear:after{
+        content: ".";
+        line-height: 0;
+        display: table;
+        visibility: hidden; 
+      }
+      .clear:after { 
+        overflow: hidden;
+        clear: both; 
+       }/*for w3c*/ 
+       .clear:{ 
+       zoom:1; 
+       }/*for IE*/ 
+       *{margin: 0;padding: 0; font-weight: 400;}
+       a{text-decoration: none;}
+       a:hover{color: var(--cr)}
+       li{list-style: none;}
+       img{vertical-align: top;}
+       td,th{display: table-cell;}
+       table{border-collapse:collapse;}
+       .w{width: 1200px;margin: 0 auto;} 
+       .c{width: 1240px;margin: 0 auto;}
+
+       .footer-message a{color: #666;}
+       .footer-message a:hover{color: var(--cr);}

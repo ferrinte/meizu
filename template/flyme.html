@@ -1,0 +1,207 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+ 	<meta charset="UTF-8">
+  <meta name="viewport" content="width=1300"/>
+  <meta name="format-detection" content="telephone=no"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <title>魅族Flyme官网</title>
+  <meta name="keywords"
+        content="魅族,Flyme,Flyme官网,Flyme 5"/>
+  <meta name="description" content="最新最全的Flyme固件更新；Flyme软件商店提供海量应用供用户下载；Flyme云服务提供用户帐号与数据管理服务；Flyme论坛为用户提供沟通交流平台；品牌窗口展示最新的Flyme资讯。"/>
+  <link rel="stylesheet" type="text/css" href="../css/com-base.css">
+  <style type="text/css">
+  	.wrap{width: 1260px;margin: 0 auto;}
+  	.header{
+  		width: 100%;
+  		height: 100px;
+  		position: absolute;
+      z-index: 1111;
+  		display: flex;
+  		justify-content: space-between;
+  	}
+  	.header .logo{float: left;}
+  	.header .logo a{
+  		background:url(../images/flyme-icon.png) no-repeat;
+  		width: 140px;
+  		height: 100px;
+  		display: block;
+  	}
+  	.header ul{
+  		float: right;
+  		display: flex;
+  		flex-direction: row;
+  	}
+  	.header ul li{
+  		width: 80px;
+  		padding: 0 10px;
+  		text-align: right;
+  		line-height: 100px;
+  	}
+  	.header ul a{
+  		color: #333;
+  		font-size: 16px;
+  		transition: 0.5s
+  	}
+  	.header ul a:hover{color: var(--cr)}
+
+  	/* 轮播图部分 */
+  	article{}
+  	.slide{width: 100%;position: relative;overflow: hidden;height: 790px;}
+  	.slide ul{overflow: hidden;width:4000px;}
+  	.slide ul li{
+      height: 790px;
+      min-width: 1368px; 
+      transition: all 0.5s;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    .slide ul li a{
+    	height: 100%;
+    	display: block;
+    	background: url(../images/flyme01.png);
+    }
+    .slide ol{
+      position: absolute;
+      width: 105px;
+      left:50%;
+      right: 50%;
+      bottom: 20px;
+      transform: translate(-50%,-50%);
+      display: flex;
+      flex-direction: row;
+    }
+    .slide ol li{
+      margin: 0 5px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: #00bbb0;
+      cursor: pointer;
+    }
+    .slide .active{
+      background-color: #fff;
+      width: 13px;
+      height: 13px;
+      border: 2px #00bcea solid;
+    }
+    .banner{width: 100%;margin: 30px 0;}
+    .banner ul{display: flex;flex-direction: row;}
+    .banner li{width: 25%;height: 186px;padding: 0 8px;}
+    .banner li a{display: block;height: 100%;}
+    .footer-nav{padding: 20px 0;border-top: 1px solid #ccc; display: flex;flex-direction: row;}
+    .footer-nav li{padding: 0 24px;font-size: 16px;color: #aaa;}
+    .footer-nav li a{color: #aaa;}
+    .copyright{font-size: 12px;color: #ccc;text-align: center; height: 50px;line-height: 50px;}
+    .copyright a{color: #ccc;}
+  </style>
+ </head>
+ <body>
+ 	
+ 	<header class ="header clear">
+ 	 <div class="wrap">
+ 		<div class="logo clear"><a href="http://www.flyme.cn/"></a></div>
+ 		<ul>
+ 			<li><a href="">Flyme6</a></li>
+ 			<li><a href="">Flyme5</a></li>
+ 			<li><a href="">下载</a></li>
+ 			<li><a href="">云服务</a></li>
+ 			<li><a href="">魅族便签</a></li>
+ 			<li><a href="">开放平台</a></li>
+ 			<li><a href="">社区</a></li>
+ 			<li><a href="">魅族官网</a></li>
+ 		</ul>
+ 	 </div>	
+ 	</header>
+ 	<article>
+ 	  <div class="slide">
+ 	    <ul id="slide">
+ 	    <li><a href="javascript:;" style="background: url(../images/flyme01.png) no-repeat center center;"></a></li>
+ 	    <li><a href="javascript:;" style="background: url(../images/flyme02.png) no-repeat center center;"></a></li>
+ 	    </ul>
+ 	    <ol id="circle">
+ 	    	<li class="active" value="0"></li>
+ 	    	<li value="1"></li>
+ 	    </ol>
+ 	   </div> 
+     <div class="banner">
+ 	    <ul class="wrap">
+ 	    	<li><a href="#" style="background: url(../images/flyme-ad01.png);"></a></li>
+ 	    	<li><a href="#" style="background: url(../images/flyme-ad02.png);"></a></li>
+ 	    	<li><a href="#" style="background: url(../images/flyme-ad03.png);"></a></li>
+ 	    	<li><a href="#" style="background: url(../images/flyme-ad04.png);"></a></li>
+ 	    	<li><a href="#" style="background: url(../images/flyme-ad05.png);"></a></li>
+ 	    </ul>
+     </div> 
+ 	</article>
+ 	<footer>
+ 		<ul class="footer-nav wrap">
+ 			<li><a href="#">博客</a></li>
+ 			<li><a href="#">查找手机</a></li>
+ 			<li><a href="#">应用商店</a></li>
+ 			<li><a href="#">开放平台</a></li>
+ 			<li class="line">|</li>
+ 			<li class="lang-choice"><a href="#">简体中文</a></li>
+ 			<li class="phone">客服热线 &nbsp;&nbsp;400-788-3333</li>
+ 			<li>
+ 				<span class="service">在线客服</span>
+ 			</li>
+      <li><a href="" class="wechat">微信公众号<a href="#"></a></li>
+      <li><a href="" class="weibo">新浪微博<a href="#"></a></li>
+ 		</ul>
+
+ 		<p class="copyright">©2017Meizu Telecom Equipment Co., Ltd. All rights reserved. 
+ 		   <a href="http://www.miitbeian.gov.cn/">备案号：粤ICP备13003602号-4</a>
+ 		   <a href="http://www2.res.meizu.com/zh_cn/images/common/icp2.jpg">经营许可证编号：粤B2-20130198</a>
+ 		   <a href="http://www2.res.meizu.com/zh_cn/images/common/com_licence.jpg">营业执照</a>
+ 		   <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44049102496076">粤公网安备 44049102496076号</a>
+    </p>
+ 	</footer>
+ </body>
+ </html>
+<script type="text/javascript">
+    var oUl = document.querySelector('#slide');
+    var aOl = document.querySelector('#circle');
+    var timer = null;
+    var iNow = 0;
+
+    aOl.addEventListener('click', tab,false);
+    oUl.addEventListener('mouseover', change1,false);
+    oUl.addEventListener('mouseout', change2,false);
+
+    function change1(){
+         clearInterval(timer);
+    };
+    function change2(){
+         timer = setInterval(autoPlay,3000);
+    };
+
+    function tab(ev){
+      console.log(ev.target.tagName.toLowerCase());
+      if(ev.target.tagName.toLowerCase() == 'li'){
+        
+         for(var i=0;i<2;i++){
+           oUl.children[i].style.opacity = 0;
+           aOl.children[i].className ='';
+         }
+        
+         oUl.children[ev.target.value].style.opacity = 1;
+         ev.target.className ='active';
+       }  
+    }
+
+    function autoPlay(){
+         for(var i=0;i<2;i++){
+           oUl.children[i].style.opacity = 0;
+           aOl.children[i].className ='';
+         }
+           oUl.children[iNow].style.opacity = 1;
+           aOl.children[iNow].className ='active';
+
+           iNow++;
+           iNow = iNow > 1? 0 : iNow
+           
+    };
+    timer = setInterval(autoPlay,3000);
+</script>

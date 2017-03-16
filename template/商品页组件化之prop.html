@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>商品页组件化</title>
+  <link rel="shortcut icon" href="../favicon.ico">
+  <meta name="viewport" content="width=1240, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../css/base.css">
+  <link rel="stylesheet" type="text/css" href="../css/blueTooth.css">
+  <script type="text/javascript" src="../js/vue.min.js"></script>
+</head>
+<body>
+<!-- <div id="demo"><z-store></z-store></div>	 -->
+<div id="demo">
+  <z-cs :preview = "preview"></z-cs>
+</div>
+</body>
+</html>
+<template id="ceshi">
+<div>
+	<h1>组件</h1>
+		
+<ul v-for="(value,key,index) in preview">
+	<li v-for="(item,i) in value">
+		<a :href="i" ><img :src="item[1]"></a>
+	</li>
+</ul> 
+  <h2>结束测试</h2>
+</div>
+</template>
+<script type="text/javascript">
+
+Vue.component('z-cs',{
+  template:'#ceshi',
+  props:{
+  	'preview':{
+    type:Object,
+    default:function(){
+    	return{
+          preone:[
+            ['../images/store/black01.png','../images/store/thumb01.jpg'],
+            ['../images/store/black02.png','../images/store/thumb02.jpg'],
+            ['../images/store/black03.png','../images/store/thumb03.jpg'],
+            ['../images/store/black04.png','../images/store/thumb04.jpg'],
+          ],
+          pretwo:[
+            ['../images/store/white01.png','../images/store/thumb1.jpg'],
+            ['../images/store/white02.png','../images/store/thumb2.jpg'],
+            ['../images/store/white03.png','../images/store/thumb3.jpg'],
+            ['../images/store/white04.png','../images/store/thumb4.jpg'],
+          ],
+    	 }
+     }
+   }
+ },
+  data(){
+  	return{
+  	}
+  },
+  methods:{
+
+  },
+
+});
+  
+var vm = new Vue({
+
+	el: "#demo",
+	data:{
+    preview:{
+    	preone:[
+        ['../images/store/black01.png','../images/store/thumb01.jpg'],
+        ['../images/store/black02.png','../images/store/thumb02.jpg'],
+        ['../images/store/black03.png','../images/store/thumb03.jpg'],
+        ['../images/store/black04.png','../images/store/thumb04.jpg'],
+      ],
+      pretwo:[
+        ['../images/store/white01.png','../images/store/thumb1.jpg'],
+        ['../images/store/white02.png','../images/store/thumb2.jpg'],
+        ['../images/store/white03.png','../images/store/thumb3.jpg'],
+        ['../images/store/white04.png','../images/store/thumb4.jpg'],
+      ],
+    }
+	}
+
+})
+</script>
+<script type="text/javascript">
+/*	    data(){
+     	return{
+     		
+     		preview:{
+          preone:[
+            ['../images/store/black01.png','../images/store/thumb01.jpg'],
+            ['../images/store/black02.png','../images/store/thumb02.jpg'],
+            ['../images/store/black03.png','../images/store/thumb03.jpg'],
+            ['../images/store/black04.png','../images/store/thumb04.jpg'],
+          ],
+          pretwo:[
+            ['../images/store/white01.png','../images/store/thumb1.jpg'],
+            ['../images/store/white02.png','../images/store/thumb2.jpg'],
+            ['../images/store/white03.png','../images/store/thumb3.jpg'],
+            ['../images/store/white04.png','../images/store/thumb4.jpg'],
+          ],
+     		},
+     		dang:0,
+        current:['current','','',''],
+        dis:['pre-black','pre-white'],
+        property:{
+        	proTitle:'魅族蓝牙小音箱',
+          proSubTitle:'曼妙持久，好音感直达心灵',
+          proPrice:['价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格 :','￥169.00'],
+          proColor:{
+          	title:'颜色分类',
+          	color:{
+          		深空灰:'../images/store/index1.png',
+          		皓月白:'../images/store/index2.png',
+          	},
+          },
+          proService:{
+            support:['支&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;持 :','顺丰包邮&nbsp;&nbsp;&nbsp;七天无理由退货'],
+            service:['服&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;务 :','本商品由 魅族 负责发货并提供售后服务'],
+          },
+        }
+     	}
+     },
+     methods:{
+     	preChange:function(idx,ev){
+          //alert('msg');
+          console.log(ev.target.tagName);
+          var a = document.querySelectorAll('.preview-booth')[idx].children;
+
+          var s = document.querySelectorAll('.preview-thumb')[idx].children;
+          for(var i=0;i<a.length;i++){
+          	a[i].style.opacity = 0;
+            a[ev.target.id].style.opacity = 1;
+          }
+          for(var i=0;i<s.length;i++){
+          	s[i].className = '';
+            s[ev.target.id].className = "current";
+          }
+     	},
+     	proChange:function(ev){
+        console.log(ev.target.tagName);
+        var p = document.querySelectorAll('.preview');
+        for(var i=0;i<p.length;i++){
+        	p[i].style.display = 'none';
+          p[ev.target.id].style.display = 'block';
+          this.dang = ev.target.id;
+        }
+     	}
+     },
+	});*/
+</script>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>支付帮助-魅族商城</title>
+  <meta name="viewport" content="width=1240, initial-scale=1">	
+  <meta name="description" content魅族官方在线商店、魅族在线商城、魅族官网在线商店、魅族商城">
+  <meta name="keywords" content="魅族商城是魅族面向全国服务的官方电子商务平台,提供魅族PRO系列、魅族MX系列和魅蓝系列等产品的预约和购买.官方正品,全国联保.">
+  <link rel="shortcut icon" href="../../favicon.ico">
+  <link rel="stylesheet" type="text/css" href="../../css/base.css">
+	<script type="text/javascript" src= "../../js/vue.min.js"></script>
+	<script type="text/javascript" src= "../../js/base.js"></script>
+  <style type="text/css">
+		.center{
+			width: 1000px;
+			margin: 0 auto;
+		}
+		.first{margin: 0;}
+		article{padding: 20px 0 80px 0}
+		h3{font-size: 20px;line-height: 100px;color: #222;}
+		span{background-color: var(--cr);border-radius: 50%; margin-right: 15px; color: #fff;
+			display: inline-block;width: 30px;height: 30px;text-align: center;line-height: 30px;}
+		h6{font-size: 16px; color: #333;line-height: 30px;}
+		p, .helps-list li{line-height: 30px;font-size: 14px;color: #444;margin-left: 45px;}
+		.helps-list li{list-style: circle;}
+		a{color: var(--cr)}
+  </style>
+</head>
+<body>
+	<div id="nav">
+		<m-nav></m-nav>
+	</div>
+	<div id="head">
+		<m-head></m-head>
+	</div>
+	<article class="center">
+	   <h3>付款遇到问题</h3>
+	   <p class="first">您好，您的订单支持支付宝在线支付、支付宝钱包扫码支付、微信扫一扫支付、网上银行在线支付，若您在使用中遇到问题，请参考以下帮助。</p>
+	   <br>
+	   <h6><span>1</span>为什么支付宝在线支付时，提示“本次支付使用的账户与原先的不一致，请使用原来的账户，或重新创建交易付款”？</h6>
+     <p>此问题出现的原因是您下单和支付订单时登录了不同支付宝账号。若选择使用原账户支付，请退出后，重新登录下单的账号进行支付；若选择不使用原账户支付，则用现在登录的账号重新下单支付。若按照以上方法操作之后还是无法付款，请联系支付宝客服解决。</p><br><br>
+	   <h6><span>2</span>网银在线支付时，银行页面打不开，怎么办？</h6>
+     <p>使用IE浏览器。点击IE的菜单【工具】——【Internet选项】——【安全】，将安全中的各项设置恢复到默认级别；打开IE浏览器的工具栏——Internet选项——常规，点击【删除Cookies】和【删除文件】，将您电脑上安装的雅虎助手等拦截功能暂时关闭，暂时关闭防火墙，重新安装支付宝的安全控件。若按照以上方法操作之后还是不行，建议您换一台电脑或换一个网络环境操作试试看。</p><br><br>
+	   <h6><span>3</span>为什么网银在线支付时，提示有“超过限额”？</h6>
+     <p>请咨询银行客服热线，提高支付限额，或使用网站提供的其他银行支付平台进行支付，将钱分批存入支付平台。</p><br><br>
+	   <h6><span>4</span>网银支付不成功的原因主要有哪些？</h6>
+     <ul class="helps-list">
+     	<li>您的银行卡尚未开通网上银行支付功能，建议您携带本人有效身份证件和银行卡到银行营业网点开通网上银行。</li>
+     	<li>所用银行卡超出该银行支持地域范围，请您更换银行卡试试。</li>
+     	<li>银行卡已过期、作废、挂失或者余额不足等，建议您咨询您的开户行。</li>
+     	<li>输入的银行卡号、密码或证件号等与预置的不符，建议您重新输入正确的卡密码或证件号等，如果您忘记了密码，请您及时与所属银行联系办理密码重置。</li>
+     	<li>银行系统数据传输可能出现异常，建议您刷新页面或者稍后重启电脑。</li>
+     	<li>您的网上银行支付有限额，请参考第3点帮助操作，或咨询银行客服热线。</li>
+     </ul>
+     <br><br>
+	   <h6><span>5</span>如何查询我是否支付成功了？</h6>
+     <p>请使用“手机号码查询订单”进行查询，或登录Flyme账户查询“我的订单”，订单状态为准备发货状态则支付成功</p><br><br> 
+	   <h6><span>6</span>到款时间</h6>
+     <p>网上支付均是支付成功即时到账；若由于网络故障导致您已支付成功的订单未改变订单状态，请您联系我们的客服人员为您解决 （客服热线400-788-3333）</p><br><br> 
+
+     <p class="first">您也可以通过<a href="">在线咨询</a>，直接询问我们，并对魅族商城购买平台提出宝贵的意见，谢谢！</p>                  
+	</article>
+	<div id="footer">
+		<m-footer></m-footer>
+	</div>	
+</body>
+</html>
+<script type="text/javascript">
+  new Vue({
+		el: "#nav"
+	});
+	new Vue({
+		el: "#head"
+	});		
+	new Vue({
+		el: "#footer"
+	});
+
+</script>

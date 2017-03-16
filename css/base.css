@@ -1,0 +1,109 @@
+    	:root{
+    		--cr:#00c3f5;
+    	}
+       .clear{*zoom:1;}
+       .clear:after{display:block; overflow:hidden; clear:both; height:0; visibility:hidden; content:".";}
+/*            .clear:before, .clear:after{content: ".";line-height: 0;display: table;visibility: hidden; }
+       .clear:after { overflow: hidden;clear: both; }for w3c 
+       .clear:{zoom:1; }for IE  */
+       *{margin: 0;padding: 0; font-weight: 400;}
+       a{text-decoration: none;}
+       a:hover{color: var(--cr)}
+       li{list-style: none;}
+       img{vertical-align: top;}
+       td,th{display: table-cell;}
+       table{border-collapse:collapse;}
+       .w{width: 1200px;margin: 0 auto;} 
+
+       /* topbar部分 */
+       nav{background-color:#fafafc;}
+       .topbar-left{float: left;}
+       .topbar-right{float: right;}
+       .topbar-left>li{float: left;margin-right:40px;}
+       .topbar-right>li{float: left;margin-right:40px;}
+       .topbar-left a, .topbar-right a{
+             font-size:12px;
+             color: #666;
+             line-height: 40px;
+             text-align: left;
+             transition: color .2s ease-in-out;
+       }
+       .topbar-left a:hover, .topbar-right a:hover{color: var(--cr)}
+       /* 导航部分 */
+       header{/* background-color: #ccc; */border-bottom: 1px #eee solid;}
+       .header-logo{
+       	float: left; 
+            cursor: pointer;
+       	background:url(../images/meizu-icon.png);
+       	width: 200px;
+       	height: 78px;
+       	margin-left:-20px;
+       	margin-right: 50px;
+       }
+       .header-nav{	float: left;}
+       .header-nav>li{float: left;margin: 0 15px;}
+       .header-nav a{
+       	line-height: 80px;
+       	font-size: 14px;
+       	color: #333;
+       	transition: color .2s ease-in-out;
+       }
+       .header-nav a:hover{color: var(--cr)}
+              footer{
+            background-color: #fafafc;
+       }
+       .footer-service{
+            margin-top: 10px;
+
+       }
+       .footer-message{
+            width: 100%;
+            padding: 20px 0;
+       }
+       .footer-message ul{
+            float: left;
+            width: 20%;
+            text-align: center;
+       }
+       .footer-message li{
+            line-height: 22px;
+            font-size: 12px;
+       }
+       .footer-message a{color: #666;}
+       .footer-message a:hover{color: var(--cr);}
+       .footer-message .footer-title{
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 15px;
+       }
+       .footer-message .tel-header{
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 10px;
+       }
+       .footer-message .tel-num{
+            color: var(--cr);
+            font-size: 24px;
+       }
+       .footer-message .tel-btn{
+            color: #fff;
+            font-size: 14px;
+            width: 150px;
+            border-radius: 5px;
+            padding: 10px 0;
+            margin-top: 14px;
+            margin-left: 46px;
+            background-color: var(--cr);
+       }
+       .footer-law{
+            border-top: 1px solid #ddd;
+            height: 100px;
+       }
+       .footer-law p{
+            background-color: #fafafc;
+            line-height: 40px;
+            margin-top: 20px;
+            font-size: 12px;
+            text-align: center;
+            color: #777; 
+       }

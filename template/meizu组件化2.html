@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>meizu</title>
+  <link rel="stylesheet" type="text/css" href="../css/mbase.css">
+	<script type="text/javascript" src="../js/vue.min.js"></script>
+  <!-- <script type="text/javascript" src="../js/mbase.js"></script>  -->	
+</head>
+<body>
+<div id="nav"><z-nav></z-nav></div>
+	<div id="footer"><z-footer></z-footer></div>
+</body>
+</html>
+<!-- <template id="foot">
+   <footer >
+   <div class="footer-service w">
+    <ul v-for ="(item,index) in footer.title ">
+       <h3 v-text="item"></h3>
+     <li v-for = "(item,index) in footer.content.a">
+        <a :href="footer.href.a[index]" v-text="item"></a>
+      </li>
+    </ul>
+    <ul class="footer-tel">
+      <li v-for ="(item,index) in footer.asociation.text" :class="footer.asociation.class[index]" v-text="item"></li>
+    </ul>  
+  </div>
+  <div class="footer-law">
+    <p v-text="footer.copyright"></p>
+  </div>    
+   </footer>
+</template> -->
+<script type="text/javascript">
+Vue.component('z-footer',{
+    template:`
+            <footer >
+              <div class="footer-service w">
+               <ul v-for ="(item,index) in footer.title ">
+                  <h3 v-text="item"></h3>
+                <li v-for = "(item,index) in footer.content.a">
+                   <a :href="footer.href.a[index]" v-text="item"></a>
+                 </li>
+               </ul>
+               <ul class="footer-tel">
+                 <li v-for ="(item,index) in footer.asociation.text" :class="footer.asociation.class[index]" v-text="item"></li>
+               </ul>  
+             </div>
+             <div class="footer-law">
+               <p v-text="footer.copyright"></p>
+             </div>    
+           </footer> 
+    `,
+    data(){
+        return{
+         footer:{title:['魅族商城','服务支持','Flyme','关于我们'],
+                 content:{
+                  a:['魅蓝 Note5','PRO 6 Plus','魅蓝 X','魅蓝 5'],
+                  b:['寄送快修','上门快修','预约维修','VIP注册'],
+                  c:['系统下载','开放平台','软件商店','查找手机'],
+                  d:['关于魅族','加入我们','联系我们','意见反馈']
+               },
+                 href:{
+                  a:['index.html','index.html','index.html','index.html'],
+                  b:['index.html','index.html','index.html','index.html'],
+                  c:['index.html','index.html','index.html','index.html'],
+                  d:['index.html','index.html','index.html','index.html'],
+               },
+                asociation:{text:['24小时全国服务热线','400-788-3333','24小时在线客服'],
+                            class:['tel-header','tel-num','tel-btn'],       
+               },
+             copyright:'©2017 Meizu Telecom Equipment Co., Ltd. All rights reserved. 备案号：粤ICP备13003602号-2 经营许可证编号：粤B2-20130198 营业执照 ',               
+               },
+        }
+    },
+});
+
+new Vue({
+
+    el: "#footer"
+
+});
+new Vue({
+
+    el: "#nav"
+
+});
+Vue.component('z-nav',{
+  template:'#topbar',
+  data(){
+    return {
+        mobile:['魅族商城','魅蓝手机','魅族手机','魅族声学','智能·配件','服务','专卖店','Flyme','社区'],
+        navHref:['index.html','index.html','index.html','index.html','index.html','index.html','index.html','index.html','index.html'],
+        nav:{
+               width: '100%',
+               height: '80px',
+               position: 'absolute',
+               zIndex: '9999'
+        },
+        leftLogo:{
+             float: 'left',
+             width: '180px',
+             height: '80px',
+             background:'url(../images/meizu-ico.png) no-repeat center center'
+        },
+        rightList:{
+             float: 'right',
+             display: 'flex',
+             flexDirection: 'row',
+        },
+        rightItem:{
+               padding: '0 20px',
+               lineHeight: '80px',
+               color: '#333',
+               fontSize: '14px',
+        },
+    }
+  }
+});
+</script>
+<template id="footbar">
+   <footer >
+   <div class="footer-service w" :style="footSer">
+    <ul>
+      <h3>魅族商城</h3>
+      <li v-for = "(item,index) in footer.content.a">
+        <a :href="footer.href.a[index]" v-text="item"></a>
+      </li>
+    </ul>
+    <ul><h3>服务支持</h3>
+      <li v-for = "(item,index) in footer.content.b" >
+        <a :href="footer.href.b[index]" v-text="item"></a>
+      </li>
+    </ul>
+    <ul><h3>Flyme</h3>
+      <li v-for = "(item,index) in footer.content.c">
+        <a :href="footer.href.c[index]" v-text="item"></a>
+      </li>
+    </ul>    
+    <ul><h3>关于我们</h3>
+      <li v-for = "(item,index) in footer.content.d">
+        <a :href="footer.href.d[index]" v-text="item"></a>
+      </li>
+    </ul>
+    <ul class="footer-tel">
+      <li class="tel-header">24小时全国服务热线</li>
+      <li class="tel-num">400-788-3333</li>
+      <li class="tel-btn">24小时在线客服</li>
+    </ul>  
+  </div>
+  <div class="footer-law">
+    <p v-text="copyright"></p>
+  </div>    
+   </footer>
+</template>
+<template id="topbar">
+    <nav :style="nav">
+      <div class="w">
+        <a href="meizu.html" class="logo" :style="leftLogo"></a>
+        <ul :style="rightList">
+          <li :style="rightItem" v-for = "(item,index) in mobile"><a :href="navHref[index]" v-text = "item"></a></li>
+          </ul>
+      </div>
+    </nav>
+</template>

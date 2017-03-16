@@ -1,0 +1,50 @@
+	.tab-title{
+			text-align: center;
+			margin-top: 30px;
+			color: #ccc;
+		}
+		.tab-title span{
+			padding: 0 18px;
+			color: #999;
+			font-size: 18px;
+			text-align: center;
+			cursor: pointer;
+		}
+		.tab-title span:hover{
+			color: #282828;
+		}
+		.tip-box{
+			height: 60px;
+		}
+		..code-box{
+			text-align: center;
+			position: relative;
+			height: 40px;
+			background-color: yellow;
+		}
+		.code-box input, .check-box input{
+			display: inline-block;
+			position: absolute;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			line-height: 22px;
+			height: 28px;
+			width: 74%;
+			font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif
+			margin: 20px 0;
+			outline: none;
+			border: 1px solid #ccc;
+			text-indent: 8px;
+			vertical-align: middle;
+			font-size: 14px;
+
+		}
+		.check-box{
+			position: relative;
+			height: 40px;
+			background-color: red;
+		}
+		.check-box input{
+
+		}

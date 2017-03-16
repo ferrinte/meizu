@@ -1,0 +1,225 @@
+       /* detail部分 */
+       article{}
+       .crumbs{
+       	hight:40px;
+       	line-height: 40px;
+       }
+       .crumbs a{color: #999;font-size: 14px;}
+       .crumbs .crumbs-title{color: #333;}
+       .row{position: relative;}
+       .preview{
+       	float: left;
+       	width: 495px;
+       	height: 536px;
+        top:0;
+        position: relative;
+       }
+       .pre-s01{display: block;}
+       .pre-s02{display: none;}
+       .pre-s03{display: none;}
+       .pre-s04{display: none;}
+       .pre-s05{display: none;}
+       .pre-s06{display: none;}
+       .pre-s07{display: none;}
+       .preview-booth li{background-size: border-box;}
+       .preview-booth a{
+            transition: 0.6s;
+            display: block;
+            position: absolute;
+            background-size: cover;
+       }
+       .preview-booth a img{
+            width: 375px;
+            height: 375px;
+       }
+       .preview-thumb{
+       /* display: flex; */
+       position: absolute;
+       bottom: 0;
+     }
+       .preview-thumb .current{border: 1px solid #ccc;}
+       .preview-thumb li{
+            float: left;
+            margin: 10px;
+       }
+       .preview-thumb a{
+            display:block;
+            padding: 5px;
+            width: 75px;
+            height: 75px;
+       }
+       .preview-thumb img{
+            width: 75px;
+            height: 75px;
+       }
+       .property{
+       	width: 675px;
+       	float: left;
+       	/* font-size: 12px; */
+       	position: relative;
+       	/* background-color: yellow; */
+       }
+       .property-hd{
+       	padding-top:20px;
+       	margin-bottom: 15px;
+       }
+       .property-hd h1{
+       	margin-bottom: 10px;
+       	font-size: 24px;
+       	color: #000;
+       }
+       .property-hd .mod-info{
+       	font-size:16px;
+       	color: #999;
+       }
+       .property-sell{
+       	background-color: #f5f5f5;
+       	margin-bottom: 25px;
+       	padding-left: 10px;
+       }
+       .property-sell i{
+       	font-style: normal;
+       	line-height: 55px;
+       	font-size: 12px;
+       }
+       .property-sell span{
+        font-size: 22px;
+        line-height: 55px;
+        color: #f0415f;
+       }
+       .property-set{width: 100%;border-bottom: 1px solid #ccc;height: 80px;}
+       .property-set-sale dt{
+            font-size: 12px;
+            color: #555;
+            float: left;
+            line-height: 55px;
+            margin-left:10px;
+       }
+       .property-set-sale dd{
+           float: left;
+           margin-left: 10px;
+           height: 55px;
+       }
+        .property-set-sale dd a{
+           display: inline-block;
+           border: 1px #ccc solid;
+           width: 80px;
+           color:#555;
+           font-size: 12px;
+           padding: 5px 10px;
+           margin-top: 6px;
+           margin-right: 5px;
+           text-align: center;
+           border-radius: 6px;
+           line-height: 30px;
+           cursor: pointer;
+        }
+        .property-set-sale .sale-link-active , .property-set-sale dd a:hover{border: 1px var(--cr) solid;}
+        .property-set-sale img{
+            width: 32px;
+            height: 32px;
+        }
+        .property-service{font-size:12px;color: #555; height: 94px; border-bottom: 1px solid #ccc;}
+        .property-service-item, .property-service-provider{
+            margin-left: 10px;
+            line-height: 30px;
+        }
+        .property-service-item dt, .property-service-provider dt{
+            float: left;
+
+        }
+        .property-service-item dd, .property-service-provider dd{
+            float: left;
+            margin-left: 10px;
+            margin-right: 6px;
+        }
+        .property-buy-quantity{
+            padding-top: 30px;
+            font-size:12px;
+            color: #555;
+            margin-left: 10px;
+        }
+        .property-buy-quantity dd, .property-buy-quantity dt, .property-buy-quantity div{
+            float: left;
+        }
+       .property-buy-quantity dd{
+           margin-left: 10px;
+       }
+       .ipt-quantity input{
+            width: 54px;
+            height: 40px;
+            text-align: center;
+            
+            outline: none;
+            border:1px solid #ccc;
+       }
+       .ipt-quantity a{
+            line-height: 40px;
+            font-size: 14px;
+            padding: 0 2px;
+            color: #333;
+            border: 1px solid #ccc;
+       }
+       .ipt-quantity{
+            /* background-color: #ccc; */
+            margin-top:-10px;
+       }
+       .btn-assert{margin-top:-10px;}
+       .btn-assert .collect{color: #999;}
+       .btn-assert .collect:hover{color: var(--cr);}
+       .btn-buynow {
+          margin: 0 30px;
+          background-color: var(--cr);
+          border-radius: 4px;
+          line-height: 40px;
+          /* display: inline-block; */
+          /* text-align: center; */
+          /* width: 160px; */
+          padding: 10px 30px;
+          color: #fff;
+          font-size: 16px;
+       }
+       .btn-buynow:hover{opacity: 0.8;}
+       .detail{
+            border-top: 1px solid #ccc;
+            margin-top: 70px;
+       }
+       .detail-tab{
+            width: 100%;
+            border-bottom: 1px solid #ddd;
+            height: 67px;
+       }
+       .detail-tab li{
+            cursor: pointer;
+            padding: 0 20px;
+            float: left;
+            line-height: 60px;
+       }
+       .detail-tab .current{
+            border-bottom: 2px solid var(--cr);
+       }
+       .detail-content{display: none;}
+       .detail-content .first{
+          margin-top: 40px;
+       }
+       .detail-argument table{
+            margin: 40px 0;
+            width: 100%;
+            border: 1px solid #dcdcdc;
+       }
+       .detail-argument table th{
+            border-right: 1px solid #dcdcdc;
+            color: #555;
+            text-align: center;
+       }
+       .detail-argument tr{
+            line-height: 40px;
+            border-bottom: 1px solid #dcdcdc;
+       }
+       .detail-argument td{
+            padding-left: 40px;
+            color: #999;
+       }
+       .detail-argument .table-group{
+            background-color: #eee;
+       }

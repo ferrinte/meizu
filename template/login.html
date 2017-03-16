@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=11;IE=10;IE=9;IE=8;" />
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="欢迎登录和注册魅族账号，您可以体验手机云服务功能，包括：在线下载应用，同步手机数据和查找手机等，让您的手机管理更加智能。" />
+	<meta name="keywords" content="魅族  meizu 登录flyme 云服务  查找手机  充值账号  MX M9 MX2" />
+	<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<link rel="shortcut icon" href="../favicon.ico">
+	<title>魅族账号 - 登录</title>
+	<style type="text/css">
+	  :root{
+	  	--cr:#32A5E7;
+	  }
+	 .clear:before, .clear:after{
+   	content: ".";
+   	line-height: 0;
+   	display: table;
+     visibility: hidden; 
+   }
+ 
+   .clear:after { 
+     overflow: hidden;
+     clear: both; 
+    }/*for w3c*/ 
+  
+    .clear:{ 
+    zoom:1; 
+    }/*for IE*/ 
+    *{margin: 0;padding: 0; font-weight: 400;}
+    a{text-decoration: none;}
+    a:hover{color: var(--cr)}
+    li{list-style: none;}
+		body{
+			background:url(../images/login-bg.png); 
+		}
+		#login{
+			position: absolute;
+			right:200px;
+			top:170px;
+			width: 300px;
+			height: 365px;
+			padding: 35px 35px 10px 35px;
+			background-color: #fff;
+		}
+     .title-box{
+     	/*background-color: #ccc;*/
+      height: 40px;
+      text-align: center;
+			margin-top: 28px;
+			color: #ccc;
+     }
+     .title-box span{
+			padding: 0 18px;
+			color: #999;
+			font-size: 18px;
+			text-align: center;
+			cursor: pointer;
+     }
+     .title-box span:hover{
+     	color: #282828;
+     }
+     .tip-box{
+     	height: 60px;
+     }
+     .code-box{
+     	/* background-color: red; */
+     	height: 60px;
+      text-align: center;
+			position: relative;
+			margin-bottom: 16px;
+			position: relative;
+     }
+     .code-box span{
+        position: absolute;
+        left: 12px;
+        top:16px;
+        color: #999;
+     }
+     .code-box input{
+     	text-indent: 80px;
+     }
+     .code-box input,.check-box input{
+     	height: 40px;
+     	width: 100%;
+     	/* outline:none; */
+     	outline-color: var(--cr);
+     	line-height: 22px;
+     	font-size: 14px;
+     	
+     	/* position: relative; */
+     }
+     .check-box{
+     	/* background-color: yellow; */
+     	height: 60px;
+     	margin-bottom: 24px;
+     	position: relative;
+     }
+     .check-box span{
+     	position: absolute;
+     	right: 20px;
+     	top:12px;
+     	color: #888;
+     	font-size: 15px;
+     }
+     .button-box{
+     	text-align: center;
+     	line-height: 44px;
+     	background-color:var(--cr);
+     	border-radius: 3px;
+     	height: 44px;
+     	color: #fff;
+     	cursor: pointer;
+     }
+     .button-box:hover{opacity: 0.8;}
+     .footer-box{
+     	/* background-color: #eee; */
+     	height: 30px;
+     	margin-top: 10px;
+     }
+     .footer-box a{
+     	line-height: 30px;
+     	color: var(--cr);
+     	font-size: 14px;
+     }
+     .footer-box a:hover{color: #00c3f5;}
+     .footer-box .rig{float: left;}
+     .footer-box .log{float: right;}     
+	</style>
+</head>
+<body>
+	<div id="login">
+		<div class="title-box">
+			<span>账号登录</span>|
+			<span>验证码登录</span>
+		</div>
+		<div class="tip-box"></div>
+		<div class="code-box clear">
+			<input type="tel" name="" placeholder="手机号码">
+			<span>+86∨&nbsp;&nbsp;&nbsp;|</span>
+		</div>
+		<div class="check-box">
+			<input type="text" name="" maxlength="6" placeholder="验证码">
+			<span>| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 获取验证码</span>
+		</div>
+		<div class="button-box">登录</div>
+		<div class="footer-box">
+      <a href="#" class="rig">注册</a>
+      <a href="#" class="log">忘记密码?</a>
+		</div>
+	</div>
+</body>
+</html>
