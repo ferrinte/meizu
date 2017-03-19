@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+  <link rel="stylesheet" type="text/css" href="../css/base2.css">	
+	<style type="text/css">
+	   :root{
+    		--cr:#00c3f5;
+    		--si:16px;
+    	}
+	    body{
+	    	height: 2000px;
+	    	transition: 2s;
+	    	position: absolute;
+	    	top:0;
+	    }
+		.scroll{
+			width: 50px;
+			height: 50px;
+			background:#ccc;
+			position: fixed;
+			right: 20px;
+			bottom: 20px;
+			color: #fff;
+			border: 1px solid #eee;
+			border-radius: 3px;
+			font-size: 40px;
+			text-align: center;
+			cursor: pointer;
+		}
+		.scroll span{
+			font-family:'微软雅黑';
+			line-height: 50px;
+			text-align: center;
+		}
+		.right{
+			display: block;
+			width: var(--si);
+			height:var(--si);
+			border: 1px solid #00bcda;
+			border-radius: 50%;
+			text-align: center;
+			line-height:var(--si);
+			color: #00bcda;
+			font-size: 12px;
+			font-family: '微软雅黑';
+		}
+		.detail-fast-float{
+			width: 100%;
+			position: fixed;
+			top:0;
+			left: 0;
+			opacity: 0;
+      background:rgba(255,255,255,0.9);
+			border-bottom:1px solid #dcdcdc;
+			transition: height 0.6s;
+		}
+		.fast-wrap{
+			position: relative;
+			height: 0;
+			opacity: 0;
+			transition: 0.6s;
+		}
+		.detail-fast-float p{
+			text-align: right;
+			position: absolute;
+			right: 160px;
+
+		}
+		.detail-fast-float .fast-top{
+			font-size: 16px;
+			color: #333;
+			line-height: 20px;
+			bottom:40px;
+		}
+		.detail-fast-float .fast-bot{
+			font-size: 12px;
+			color: #999;
+			line-height: 20px;
+			bottom:16px;
+		}
+		.detail-fast-float .fast-price{
+			color: #f0415f;
+			font-weight: 700;
+			font-size: 18px;
+		}
+		.detail-fast-float .fast-btn{
+			position: absolute;
+			bottom:20px;
+			right: 0;
+			display: inline-block;
+			background-color: #2ac4f6;
+			border: 1px solid #12bdf5;
+			border-radius: 3px;
+			padding: 10px 30px;
+			color: #fff;
+			font-size: 14px;
+		}
+	</style>
+</head>
+<body>
+<!-- 浮动标签 -->
+
+	<div class="scroll"><span>∧</span></div>
+	<p>洛阳花开动京城</p>
+	<p>洛阳花开动京城</p>
+<span class="right"></span>
+<!-- <a href="../index.html" target="_self">hello</a> -->
+</body>
+</html>
+<script type="text/javascript">
+  var scroll = document.querySelector('.scroll');
+  var speed = 30;
+  var mask = document.querySelector('.mask');
+  scroll.onclick = function(){
+     var p = document.body.scrollTop/speed;
+     var iNow = 0;
+     var timer = null;
+     function animate(){
+       document.body.scrollTop -= speed;
+       iNow ++;
+       if(iNow >= p){
+       	clearInterval(timer);
+       }
+     }
+     timer = setInterval(animate,10);
+  }
+  window.onscroll = function(){
+  	var float = document.querySelector('.detail-fast-float');
+  	var wrap = document.querySelector('.fast-wrap');
+  	if(document.body.scrollTop > 400){
+  		  float.style.opacity = 1;
+        wrap.style.opacity = 0.9;
+        wrap.style.height = '80px';
+  	}
+  	else{
+        wrap.style.opacity = 0;
+        wrap.style.height = 0;
+        float.style.opacity = 0;
+  	}
+  }
+</script>

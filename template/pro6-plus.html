@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>魅族PRO 6 Plus-魅族商城</title>
+  <meta name="viewport" content="width=1240, initial-scale=1">
+	<title>Document</title>
+  <meta name="description" content="魅族PRO 6 Plus，64G版本，现货开售，正品行货，另有魅族PRO 6 Plus详细介绍、图片、价格、参数、售前咨询等，购买魅族PRO 6 Plus上魅族商城，全场包邮，7天无理由退货，15天换货保障。">
+  <meta name="keywords" content="魅族PRO 6 Plus，魅族，魅族商城">	
+  <link rel="shortcut icon" href="../favicon.ico">
+  <link rel="stylesheet" type="text/css" href="../css/base2.css">
+  <link rel="stylesheet" type="text/css" href="../css/store2.css">
+  <script type="text/javascript" src="../js/vue.min.js"></script>
+  <script type="text/javascript" src="../js/base2.js"></script>
+  <script type="text/javascript" src="../js/store2.js"></script>   
+</head>
+<body>
+ <div id="nav"><m-nav></m-nav></div>
+ <div id="header"><m-header></m-header></div>
+ <div id="store"><m-store :preview="preview" :property="property"></m-store></div>
+ <div id="footer"><m-footer></m-footer></div>
+</body>
+</html>
+<script type="text/javascript">
+
+  new Vue({
+	el: "#nav"
+  });
+  new Vue({
+	el: "#header"
+  });
+  new Vue({
+	  el: "#store",
+    data:{
+      preview:{
+        preone:[
+          ['../images/store/pre-pro6plus01.jpg','../images/store/thu-pro6plus01.jpg'],
+          ['../images/store/pre-pro6plus02.jpg','../images/store/thu-pro6plus02.jpg'],
+          ['../images/store/pre-pro6plus03.jpg','../images/store/thu-pro6plus03.jpg'],
+        ],
+        pretwo:[
+          ['../images/store/pre2-pro6plus01.jpg','../images/store/thu2-pro6plus01.jpg'],
+          ['../images/store/pre2-pro6plus02.jpg','../images/store/thu2-pro6plus02.jpg'],
+          ['../images/store/pre2-pro6plus03.jpg','../images/store/thu2-pro6plus03.jpg'],
+        ],
+      },
+      property:{
+            proTitle:'魅族PRO 6plus',
+            proDiscrib:'64G版本，现货开售',
+            proPrice:'￥2999.00',
+            proVersion:['128G版','64G版'],
+            proNet:['公开版'],
+            proRom:['64G'],
+            proCombo:'',
+            proColor:{
+                香槟金:'../images/store/idx-pro6plus01.png',
+                月光银:'../images/store/idx-pro6plus02.png',
+            },
+            proService:{
+              support:['顺丰包邮','七天无理由退货'],
+              service:'魅族',
+            },
+      },
+    }
+  }); 
+  new Vue({
+	el: "#footer"
+  });
+</script>

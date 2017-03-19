@@ -17,9 +17,10 @@
     /* nav部分 */
     nav{
     	width: 100%;
-    	height: 80px;
+      height: 80px; 
+      background-color: #fff;
     	position: absolute;
-      z-index: 9999;
+      z-index: 999;
     }
     nav .logo{
     	float: left;
@@ -28,9 +29,10 @@
     	background:url(../images/meizu-ico.png) no-repeat center center;
     }
     nav .nav-list{
-    	float: right; 
+    	float: left; 
     	display: flex;
     	flex-direction: row;
+      margin-left: 290px;
     }
     .nav-list li{
     	padding: 0 15px;
@@ -42,103 +44,118 @@
       text-align: right;
     }
     .login{
-      width:30px;
+      width: 60px;
       height: 80px;
-      background-size: border-box;
-      border-top: 3px solid transparent;
-      border-right: 1px solid transparent;
-      border-left: 1px solid transparent;
-      background: url(../images/logoin-icon.png) no-repeat center center;
+      float: right;
+      box-sizing: border-box;
       cursor: pointer;
       position: relative;
-      z-index: 999;
-    }
-    .login-default{
+      z-index: 999; 
       border-top: 3px solid transparent;
       border-right: 1px solid transparent;
       border-left: 1px solid transparent;
+      border-bottom: 1px solid transparent;
     }
-    .login-active{
+    .login:hover{
       background-color: #fff;
       border-top: 3px solid var(--cr);
       border-right: 1px solid #ccc;
       border-left: 1px solid #ccc;
-      border-bottom: 1px solid #fff;
     }
-    .login p{
-      width: 60px;
-      height: 1px;
-      background-color:#fff;
+    .login-icon{
       position: absolute;
-      top: 80px;
+      left: 0;
       right: 0;
+      margin: auto;
+      width: 30px;
+      height: 30px;
+      top:22px;
+      background: url(../images/logoin-icon.png) no-repeat center center; 
     }
     .float-login{
-      display: none;
-      width: 140px;
+      width: 160px;
       border: 1px solid #ccc;
       position: absolute;
-      background-size: border-box;
+      box-sizing: border-box;
+      background-color: #fff;
       right: -1px;
-      top:80px;
+      top:76px;
       padding: 10px;
+    }
+    .log-mask{
+      position: absolute;
+      top:76px;
+      right: 0;
+      width: 60px;
+      border-top: 1px solid #fff;
     }
     .float-login li{
     }
     .float-login li a{
       margin-left: 20px;
       display: block;
-      font:400 12px/30px '微软雅黑';
+      font:400 12px/36px '微软雅黑';
       color: #555;
       text-align: left;
     }
-    .float-login .login-item:hover{color: var(--cr)}
+    .login-item:hover{color: var(--cr)}
     .float-login .login-btn{
-      width: 100px;
-      height: 30px;
-      margin: 5px 16px;
+      width: 110px;
+      height: 36px;
+      margin: 6px 16px;
       background-color: var(--cr);
       color: #fff;
       text-align: center;
     }
+    .float-login .login-rig{color: #ccc;}
     .float-login .login-rig i{
-      /* font-size: 10px; */
-      /* background-color: #ccc; */
+      font-size: 10px; 
+      color: var(--cr);
     }
     .float-mobile{
       display: flex;
       flex-direction: row;
       justify-content:flex-end;
       width: 100%;
+      /* height: 160px; */
+      overflow: hidden;
       position: absolute;
-      left: 0;
       top:80px;
-      opacity: 0;
-      z-index: 9999;
+      background-color: #fff;
+      opacity: 0; 
+      z-index: 99;
       transition: all 1s;
-
     }
     .float-mobile li{
       text-align: center;
-      /* transform: translate(-80px,0); */
-      transition: 0.9s;      
+      transition: 0.9s;
+      position: relative;
+      /* background-color:#00bcda; */
+      width: 125px;
+      height: 160px;
+      /* background-color: green;  */     
     }
     .float-mobile li a{
       display: block;
       background-repeat: no-repeat;
-      background-position: center center;
+      /* background-position: 10px 10px; */
       width: 125px;
-      height: 120px;
-      position: relative;
+      height: 160px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      /* background-color: #000; */
+      position: absolute;
     }
     .float-mobile li a i{
-      font-size: 13px;
+      display: block;
+      font-size: 15px;
+      color:#666;
       position: absolute;
       left: 0;
       right: 0;
-      margin: 0 auto;
-      bottom:-20px;
-      color:#999;
+      margin: auto;
+      bottom: 10px;
     }
 
 /* footer部分 */

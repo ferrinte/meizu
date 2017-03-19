@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>care</title>
+	<link rel="stylesheet" type="text/css" href="../css/mbase.css">
+	<script type="text/javascript" src="../js/vue.min.js"></script>
+	<script type="text/javascript" src="../js/mbase.js"></script>
+	<style type="text/css">
+		#demo{
+			width: 300px;
+			height: 200px;
+			background-color: red;
+			position: absolute;
+			right: 0;
+		}
+		ul>li{
+			width: 100%;
+			height: 30px;
+			margin-top: 10px;
+			background-color: orange;
+		}
+		#text{
+			margin-left: 580px;
+			width: 300px;
+			height: 200px;
+			background-color: #00bcda;
+			position: absolute;
+			left: 0;
+		}
+	</style>
+</head>
+<body>
+	<div id="demo" @mouseover="show" @mouseout="hide">
+		<ul >
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+		</ul>
+	</div>
+<div id="text">
+<ul >
+<li>1</li>
+<li>2</li>
+<li>3</li>
+</ul> 
+</div> 
+</body>
+</html>
+<script type="text/javascript">
+	var vm = new Vue({
+	
+		el: "#demo",
+		data:{
+		},
+	  methods:{
+	  	hide:function(ev){
+        var oUl = document.querySelector('#demo');
+        oUl.style.height = '0';
+	  	},
+	  	show:function(){
+        var oUl = document.querySelector('#demo');
+        oUl.style.height = '200px';
+	  	} 
+	  }
+	
+	})
+</script>
+<script type="text/javascript">
+	   var sss = document.querySelector('#text');
+	   sss.addEventListener('mouseover',function(){
+	   	sss.style.height = '200px';
+	   },false)
+	   sss.addEventListener('mouseout',function(){
+	   	sss.style.height = '0';
+	   },false)
+</script> 

@@ -6,12 +6,17 @@
   <title>魅族在线商店产品三包服务</title>	
   <meta name="keywords" content="售后服务" />	
   <meta name="description" content="售后服务" />
-  <link rel="shortcut icon" href="../../favicon.ico">
-  <link rel="stylesheet" type="text/css" href="../../css/base.css">
-	<script type="text/javascript" src= "../../js/vue.min.js"></script>
-	<script type="text/javascript" src= "../../js/vue-router.js"></script>
-	<script type="text/javascript" src= "../../js/base.js"></script> 
+  <link rel="shortcut icon" href="../favicon.ico">
+  <link rel="stylesheet" type="text/css" href="../css/base2.css">
+	<script type="text/javascript" src= "../js/vue.min.js"></script>
+	<script type="text/javascript" src= "../js/vue-router.js"></script>
+	<script type="text/javascript" src= "../js/base2.js"></script> 
 	<style type="text/css">
+	  article{
+	  	position: relative;
+	  	display: block;
+	  	padding-bottom: 120px;
+	  }
 	  .center{width: 960px;margin: 0 auto;}
 		.crumbs{
 			width: 100%;
@@ -65,7 +70,7 @@
 	<div id="head">
 		<m-head></m-head>
 	</div>
-	<article class="center" id="router">
+	<article class="center clear" id="router">
 		<section class="crumbs">服务支持 > 售后服务政策</section>
     <m-serside></m-serside>
 		<section class="main" id="view">
@@ -89,18 +94,18 @@
 <script type="text/javascript">
  Vue.component('m-serside',{
 	template:`
-	   <aside class="side">
+	   <aside class="side clear">
        <ul>
 	   			<li class="title"><b>手机售后政策</b></li>
-	   			<li v-for="(item,index) in service1" @click="show"><router-link :to="link1[index]"    v-text="item"></router-link></li>
+	   			<li v-for="(item,index) in service1" @click="show"><router-link :to="link1[index]" v-text="item"></router-link></li>
        </ul>
        <ul>
 	   			<li class="title"><b>配件售后政策</b></li>
-           <li v-for="(item,index) in service2" @click="show"><router-link :to="link2[index]"    v-text="item"></router-link></li>
+           <li v-for="(item,index) in service2" @click="show"><router-link :to="link2[index]" v-text="item"></router-link></li>
 	   		</ul>
 	   		<ul>	
 	   			<li class="title"><b>服务渠道</b></li>
-           <li v-for="(item,index) in service3" @click="show"><router-link :to="link3[index]"    v-text="item"></router-link></li>
+           <li v-for="(item,index) in service3" @click="show"><router-link :to="link3[index]" v-text="item"></router-link></li>
 	   		</ul>
      </aside>
   	`,

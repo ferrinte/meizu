@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>魅蓝 5s 32G版-魅族商城</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">	
+  <meta name="description" content="魅蓝 5s 32G版，3月20日10点，限量开售，正品行货，另有魅蓝 5s 32G版详细介绍、图片、价格、参数、售前咨询等，购买魅蓝 5s 32G版上魅族商城，全场包邮，7天无理由退货，15天换货保障。">
+  <link rel="shortcut icon" href="../favicon.ico">
+  <link rel="stylesheet" type="text/css" href="../css/base2.css">
+  <link rel="stylesheet" type="text/css" href="../css/store2.css">
+  <script type="text/javascript" src="../js/vue.min.js"></script>
+  <script type="text/javascript" src="../js/base2.js"></script>
+  <script type="text/javascript" src="../js/store2.js"></script>   
+</head>
+<body>
+  <div id="nav"><m-nav></m-nav></div>
+  <div id="header"><m-header></m-header></div>
+  <div id="store"><m-store :preview="preview" :property="property"></m-store></div>
+  <div id="footer"><m-footer></m-footer></div>
+</body>
+</html>
+<script type="text/javascript">
+
+  new Vue({
+	el: "#nav"
+  });
+  new Vue({
+	el: "#header"
+  });
+  new Vue({
+	  el: "#store",
+    data:{
+      preview:{
+        preone:[
+          ['../images/store/pre-lan5s01.jpg','../images/store/thu-lan5s01.jpg'],
+          ['../images/store/pre-lan5s02.jpg','../images/store/thu-lan5s02.jpg'],
+          ['../images/store/pre-lan5s03.jpg','../images/store/thu-lan5s03.jpg'],
+          ['../images/store/pre-lan5s04.jpg','../images/store/thu-lan5s04.jpg'],
+        ],
+        pretwo:[
+          ['../images/store/pre2-lan5s01.jpg','../images/store/thu2-lan5s01.jpg'],
+          ['../images/store/pre2-lan5s02.jpg','../images/store/thu2-lan5s02.jpg'],
+          ['../images/store/pre2-lan5s03.jpg','../images/store/thu2-lan5s03.jpg'],
+          ['../images/store/pre2-lan5s04.jpg','../images/store/thu2-lan5s04.jpg'],
+        ],
+        prethr:[
+          ['../images/store/pre3-lan5s01.jpg','../images/store/thu3-lan5s01.jpg'],
+          ['../images/store/pre3-lan5s02.jpg','../images/store/thu3-lan5s02.jpg'],
+          ['../images/store/pre3-lan5s03.jpg','../images/store/thu3-lan5s03.jpg'],
+          ['../images/store/pre3-lan5s04.jpg','../images/store/thu3-lan5s04.jpg'],
+        ],
+        prefor:[
+          ['../images/store/pre4-lan5s01.jpg','../images/store/thu4-lan5s01.jpg'],
+          ['../images/store/pre4-lan5s02.jpg','../images/store/thu4-lan5s02.jpg'],
+          ['../images/store/pre4-lan5s03.jpg','../images/store/thu4-lan5s03.jpg'],
+          ['../images/store/pre4-lan5s04.jpg','../images/store/thu4-lan5s04.jpg'],
+        ],
+      },
+      property:{
+            proTitle:'魅蓝 5s 32G版',
+            proDiscrib:'3月20日10点，限量开售',
+            proPrice:'¥ 999.00',
+            proVersion:['32G版','64G版','礼盒版','套餐版'],
+            proNet:['全网通公开版'],
+            proRom:['32GB'],
+            proCombo:'',
+            proColor:{
+                玫瑰金:'../images/store/idx-lan5s01.png',
+                香槟金:'../images/store/idx-lan5s02.png',
+                月光银:'../images/store/idx-lan5s01.png',
+                星空黑:'../images/store/idx-lan5s02.png',
+            },
+            proService:{
+              support:['花呗分期','顺丰包邮','七天无理由退货'],
+              deliver:'',
+              service:'魅族',
+            },
+      },
+    }
+  }); 
+  new Vue({
+	el: "#footer"
+  });
+</script>

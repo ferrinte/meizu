@@ -7,21 +7,192 @@
 	<script type="text/javascript" src="../js/vue.min.js"></script>
 	<script type="text/javascript" src="../js/mbase.js"></script>
 	<style type="text/css">
-		#footer{
+/* 		#footer{
+	position: absolute;
+	top:400px;
+	left: 0;
+	right: 0;
+	margin: auto;
+} */
+		.banner{
+			position: relative;
+			width: 100%;
+			height: 520px;
+			background-color: #ddd;
+		}
+		.banner .imag{
+			background:url(../images/care-banner.png) no-repeat center center;
+			width: 561px;
+			height: 462px;
+			zoom:0.8;
 			position: absolute;
-			top:400px;
-			left: 0;
-			right: 0;
-			margin: auto;
+			left: 105px;
+			top:189px;
+		}
+		.banner .text{
+			width: 360px;
+			position: absolute;
+			right: 280px;
+			top:210px;
+			font-family:'微软雅黑'
+		}
+		.banner .text h1{
+			font-size: 44px;
+			line-height: 80px;
+			color: #222;
+		}
+		.banner .text h5{
+			font-size: 18px;
+			color: #444;
+			line-height: 28px;
 		}
 	</style>
 </head>
 <body>
 <div id="nav"><z-nav></z-nav></div>
+<div class="banner">
+ <div class="w">
+ 	<div class="imag"></div>
+ 	<div class="text">
+ 		<h1>欢迎使用魅族服务</h1>
+ 		<h5>自助服务快捷省时，通过自助服务您可以快速体验寄送快修、预约维修、上门快修等服务。 您也可以联系我们客服人员，我们将竭诚为您服务。</h5>
+ 	</div>
+ </div>	
+</div>
 <div id="footer" ><z-footer></z-footer></div>
 </body>
 </html>
+<template id="na">
+    <nav>
+      <div class="w">
+          <a href="meizu.html" class="logo"></a>
+          <ul class="nav-list"  @mouseover="show">
+           <li v-for = "(item,index) in showBar.list" :id ="showBar.value[index]">
+              <a :id="showBar.value[index]" :href="showBar.href[index]" v-text="item"></a>
+           </li>
+          </ul>
+          <!-- 登录弹出层 -->
+          <div class="login" @mouseover="hoverEnter" @mouseout="hoverLeave">
+            <span class="login-icon"></span>
+            <ul class="float-login" v-show="false">
+                <li v-for="(item,index) in showBar.login.text" >
+                    <a :href="showBar.login.href[index]" v-html="item" :class="showBar.login.class[index]"></a>
+                </li>
+            </ul>
+            <p class="log-mask" v-show="false"></p>
+            <p>
+          </div>
+      </div>
+      <!-- mobile浮动层 -->
+       <ul class="float-mobile" v-for="(value,key,index) in hideBar.mobile" :id="key" v-hide="true" @mouseout="hide">
+          <li v-for="(item,i) in value" :id="i">
+            <a :href="value[i][1]" :style="{backgroundImage:value[i][0]}" :id="i">
+              <i v-text="value[i][2]" :id="i"></i>
+            </a>
+          </li>
+       </ul>         
+
+</template>
 <script type="text/javascript">
+Vue.component('z-nav',{
+	template:'#na',
+	data(){
+       return {
+          showBar:{
+             list:['魅族商城','魅蓝手机','魅族手机','魅族声学','智能 · 配件','服务','专卖店','Flyme','  社区'],
+             href:['index.html','index.html','index.html','index.html','index.html','index.html','index.html','index.html','index.html'], 
+             value:['','meilan','meizu','affix','auto','','','','',],
+             event:['','','','','','','','','',],
+             event2:' hoverEnter',
+             login:{
+                  text:['立即登录','没有账号?<i>立即注册<i/>','我的购物车','我的订单','M码通道'],
+                  href:['index.html','index.html','index.html','index.html','index.html'],
+                  class:['login-btn','login-rig','login-item','login-item','login-item']
+             }
+          },
+          hideBar:{
+             mobile:{
+                meizu:[
+                ['url(../images/pro01.png)','index.html','PRO6PLUS'],
+                ['url(../images/pro02.png)','index.html','PRO6S'],
+                ['url(../images/pro03.png)','index.html','MX6']],
+                meilan:[
+                ['url(../images/note01.png)','index.html','note1',],
+                ['url(../images/note02.png)','index.html','note1',],
+                ['url(../images/note03.png)','index.html','note1',],
+                ['url(../images/note04.png)','index.html','note1',],
+                ['url(../images/note05.png)','index.html','note1',],
+                ['url(../images/note06.png)','index.html','note1',],
+                ['url(../images/note07.png)','index.html','note1',]],
+                affix:[
+                ['url(../images/affix01.png)','index.html','电源适配器'],
+                ['url(../images/affix02.png)','index.html','电源适配器'],
+                ['url(../images/affix03.png)','index.html','电源适配器'],
+                ['url(../images/affix04.png)','index.html','电源适配器'],
+                ['url(../images/affix05.png)','index.html','电源适配器'],
+                ['url(../images/affix06.png)','index.html','电源适配器'],],
+                auto:[
+                ['url(../images/ying01.png)','index.html','智能手环'],
+                ['url(../images/ying02.png)','index.html','智能手环'],
+                ['url(../images/ying03.png)','index.html','智能手环'],
+                ['url(../images/ying04.png)','index.html','智能手环'],
+                ['url(../images/ying05.png)','index.html','智能手环'],
+                ['url(../images/ying06.png)','index.html','智能手环'],
+                ['url(../images/ying07.png)','index.html','智能手环'],
+                ['url(../images/ying08.png)','index.html','智能手环'],]
+             },
+          }
+       }
+	},
+    methods:{
+        hoverEnter:function(ev){
+            var floatBar = document.querySelector('.float-login');
+            var logMask = document.querySelector('.log-mask');
+            floatBar.style.display = 'block';
+            logMask.style.display ="block";
+        },
+        hoverLeave:function(ev){
+            var floatBar = document.querySelector('.float-login');
+            var logMask = document.querySelector('.log-mask');
+            floatBar.style.display = 'none';
+            logMask.style.display ="none";
+        },
+        show:function(ev){
+        	var navList = document.querySelector('.nav-list');
+        	var floList = document.querySelectorAll('.float-mobile');
+        	var navItem = navList.children;
+
+        		  for(var i=0;i<floList.length;i++){
+        		  	floList[i].style.opacity = '0';
+        		  	floList[i].style.height = '0';
+                  if(ev.target.id == floList[i].id){
+                    floList[i].style.opacity = '1'
+                    floList[i].style.height = '160px';
+        		  	  }
+        	    }
+        },
+        hide:function(ev){
+        	 var navList = document.querySelector('.nav-list');
+        	 var floList = document.querySelectorAll('.float-mobile');
+        	 console.log(ev.target.tagName);
+        	 if(ev.target.tagName.toLowerCase() == 'ul'){
+        	 	 for(var i=0;i<floList.length;i++){
+        	 	 	floList[i].style.opacity = '0';
+        	 	 	floList[i].style.height = '0';
+        	 	 }
+        	 }else{
+        	 	 for(var i=0;i<floList.length;i++){
+        	 	 	floList[i].style.opacity = '1';
+        	 	 	floList[i].style.height = '160px';
+        	 	 }
+        	 }
+        },
+    },
+    computed:{
+
+    }
+});
+
 	new Vue({
 		el: "#nav"
 	});

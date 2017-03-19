@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+  <link rel="shortcut icon" href="../favicon.ico">
+  <link rel="stylesheet" type="text/css" href="../css/base2.css">
+  <script type="text/javascript" src="../js/vue.min.js"></script>
+  <script type="text/javascript" src="../js/base2.js"></script>
+</head>
+<body>
+ <div id="nav"><m-nav></m-nav></div>
+ <div id="header"><m-header></m-header></div>
+ <div id="footer"><m-footer></m-footer></div>
+</body>
+</html>
+<!-- <template id="head">
+  <header class="clear">
+   <div class="w header">
+    <div class="head-logo"><a href="index.html"></a></div>    
+    <ul class="head-list"  @mouseover ="show" @mouseout ="hide">
+      <li  class="head-link" v-for= "(item,i) in head.list" :id="i"><a :href="head.href[i]" v-text="item" :id="i"></a></li>
+    </ul>
+   </div>
+   <div class="mobile" @mouseover ="selc" @mouseout ="hide">
+     <ul class="head-mobile" v-for="(value,key,index) in head.mobile" :id="index">
+      <li v-for="(item,i) in value" >
+        <a :href="value[i][1]" @mouseover="opac" @mouseout="opvc">
+          <img :src="value[i][0]">
+          <p class="mobile-name"  v-text="value[i][2]"></p>
+          <p class="mobile-price" v-text="value[i][3]"></p>
+        </a>
+      </li>
+    </ul>
+  </div> 
+  </header>  
+</template> -->
+<script type="text/javascript">
+/*header部分组件*/
+  Vue.component('m-header',{
+    template:`
+  <header class="clear">
+   <div class="w header">
+    <div class="head-logo"><a href="index.html"></a></div>    
+    <ul class="head-list"  @mouseover ="show" @mouseout ="hide">
+      <li  class="head-link" v-for= "(item,i) in head.list" :id="i"><a :href="head.href[i]" v-text="item" :id="i"></a></li>
+    </ul>
+   </div>
+   <div class="mobile" @mouseover ="selc" @mouseout ="hide">
+     <ul class="head-mobile" v-for="(value,key,index) in head.mobile" :id="index">
+      <li v-for="(item,i) in value" >
+        <a :href="value[i][1]" @mouseover="opac" @mouseout="opvc">
+          <img :src="value[i][0]">
+          <p class="mobile-name"  v-text="value[i][2]"></p>
+          <p class="mobile-price" v-text="value[i][3]"></p>
+        </a>
+      </li>
+    </ul>
+  </div> 
+  </header>  
+    `,
+    data(){
+      return {
+      	head:{
+          list:['PRO手机','魅蓝手机','MX手机','精选配件','智能硬件'],
+          href:['index.html','index.html','index.html','index.html','index.html'],
+             mobile:{
+                pro:[
+                ['../images/mobile/pro01.png','../index.html','Pro6plus','￥2699'],
+                ['../images/mobile/pro02.png','../index.html','Pro6s','￥2999'],
+                ['../images/mobile/pro03.png','../index.html','mx6','￥2299']],
+             meilan:[
+                ['../images/mobile/note01.png','../index.html','魅蓝5','￥799起'],
+                ['../images/mobile/note02.png','../index.html','魅蓝Note5','￥999起'],
+                ['../images/mobile/note03.png','../index.html','魅蓝X','￥1999起'],
+                ['../images/mobile/note04.png','../index.html','魅蓝5','￥788起'],
+                ['../images/mobile/note05.png','../index.html','魅蓝Note3','￥799起'],
+                ['../images/mobile/note06.png','../index.html','魅蓝3s','￥699起'],
+                ['../images/mobile/note07.png','../index.html','魅蓝3','￥599']],
+                mx:[
+                ['../images/mobile/mx01.png','index.html','魅族MX6','￥1699起']],
+  
+                affix:[
+                ['../images/mobile/affix01.png','../index.html','魅族H50耳机','￥399'],
+                ['../images/mobile/affix02.png','../index.html','先锋耳机','￥79'],
+                ['../images/mobile/affix03.png','../index.html','铁三角','￥488'],
+                ['../images/mobile/affix04.png','../index.html','森海塞尔','￥688'],
+                ['../images/mobile/affix05.png','../index.html','房图麦克风','￥268'],
+                ['../images/mobile/affix06.png','../index.html','飞骜X1二代','￥158'],],
+                auto:[
+                ['../images/mobile/ying01.png','../index.html','航嘉小优usb','￥78'],
+                ['../images/mobile/ying02.png','../index.html','乐心体重秤','￥169'],
+                ['../images/mobile/ying03.png','../index.html','魅族手环','￥229'],
+                ['../images/mobile/ying04.png','../index.html','乐乐心率手环','￥169'],
+                ['../images/mobile/ying05.png','../index.html','暴风魔镜S1','￥179'],
+                ['../images/mobile/ying06.png','../index.html','新款游戏手柄','￥99'],
+                ['../images/mobile/ying07.png','../index.html','行车记录仪','￥339'],
+                ['../images/mobile/ying08.png','../index.html','智能手环','￥299'],]
+             },
+      	}
+     }
+   },
+    methods:{
+      show:function(ev){
+      	var mob = document.querySelector('.mobile');
+      	var mobile = document.querySelectorAll('.head-mobile');
+      	
+      	mob.style.height = "150px";
+        mob.style.opacity = "1";
+      	for(var i=0;i<mobile.length;i++){
+      		mobile[i].style.opacity= "0";
+      		mobile[i].style.zIndex= "10";
+      	  if(ev.target.id == mobile[i].id){
+            mobile[i].style.opacity= "1";
+            mobile[i].style.zIndex= "20";
+      	  }
+      	}
+      },
+      selc:function(ev){
+      	var mob = document.querySelector('.mobile');
+      	mob.style.height = "150px";
+        mob.style.opacity = "1";
+      },
+      hide:function(ev){
+      	var mob = document.querySelector('.mobile');
+      	mob.style.height = "0";
+        mob.style.opacity = "0";
+      },
+      opac:function(ev){
+      	var mob = document.querySelector('.mobile');
+      	var img = mob.querySelectorAll('img');
+      	if(ev.target.tagName.toLowerCase() === 'img'){
+      		for(var i=0;i<img.length;i++){
+            img[i].style.opacity = '0.7';
+            img[i].parentNode.style.opacity = '0.7';
+      		}
+      		ev.target.style.opacity = '1';
+      		ev.target.parentNode.style.opacity = '1';
+      	}
+      },
+      opvc:function(){
+      	var mob = document.querySelector('.mobile');
+      	var img = mob.querySelectorAll('img');
+      		for(var i=0;i<img.length;i++){
+            img[i].style.opacity = '1';
+            img[i].parentNode.style.opacity = '1';
+      	}
+      }
+    }
+  });
+
+  new Vue({
+	el: "#nav"
+  });
+  new Vue({
+	el: "#header"
+  });
+  new Vue({
+	el: "#footer"
+  });
+</script>

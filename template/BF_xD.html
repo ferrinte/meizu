@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <title>暴风魔镜 小D 虚拟现实智能VR眼镜-魅族商城</title>
+  <meta name="description" content="暴风魔镜 小D 虚拟现实智能VR眼镜，3D巨幕观影，海量影视资源，正品行货，另有暴风魔镜 小D 虚拟现实智能VR眼镜详细介绍、图片、价格、参数、售前咨询等，购买暴风魔镜 小D 虚拟现实智能VR眼镜上魅族商城，全场包邮，7天无理由退货，15天换货保障。">
+  <meta name="keywords" content="暴风魔镜 小D 虚拟现实智能VR眼镜，魅族，魅族商城">
+  <link rel="shortcut icon" href="../favicon.ico">
+  <link rel="stylesheet" type="text/css" href="../css/base2.css">
+  <link rel="stylesheet" type="text/css" href="../css/store2.css">
+  <script type="text/javascript" src="../js/vue.min.js"></script>
+  <script type="text/javascript" src="../js/base2.js"></script>
+  <script type="text/javascript" src="../js/store2-BF.js"></script>     
+</head>
+<body>
+  <div id="nav"><m-nav></m-nav></div>
+  <div id="header"><m-header></m-header></div>
+  <div id="store"><m-store :preview="preview" :property="property"></m-store></div>
+  <div id="footer"><m-footer></m-footer></div>
+</body>
+</html>
+<script type="text/javascript">
+  new Vue({
+	el: "#nav"
+  });
+  new Vue({
+	el: "#header"
+  });
+  new Vue({
+	  el: "#store",
+    data:{
+      preview:{
+        preone:[
+          ['../images/store/pre-BF_xD01.jpg','../images/store/thu-BF_xD01.jpg'],
+          ['../images/store/pre-BF_xD02.jpg','../images/store/thu-BF_xD02.jpg'],
+          ['../images/store/pre-BF_xD03.jpg','../images/store/thu-BF_xD03.jpg'],
+          ['../images/store/pre-BF_xD04.jpg','../images/store/thu-BF_xD04.jpg'],
+        ],
+      },
+      property:{
+            proTitle:'暴风魔镜 小D 虚拟现实智能VR眼镜',
+            proDiscrib:'3D巨幕观影，海量影视资源',
+            proPrice:'¥ 49.00',
+            /*proVersion:['暴风小D','暴风S1安卓版'],*/
+            proVersion:[
+              ['暴风小D','BF_xD.html'],
+              ['暴风S1安卓版','BF_S1.html'],         
+            ],
+            proNet:'',
+            proRom:'',
+            proCombo:'',
+            proColor:{
+                黑色:'../images/store/idx-BF_xD01.png',
+            },
+            proService:{
+              support:['花呗分期'],
+              deliver:'',
+              service:'北京欧信兴业科技有限公司',
+            },
+      },
+    }
+  }); 
+  new Vue({
+	el: "#footer"
+  });
+</script>
